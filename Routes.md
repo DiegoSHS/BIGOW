@@ -1,20 +1,20 @@
 ```mermaid
 graph TD;
+    subgraph Mostrar, crear, editar y eliminar
     API-->Ventas;
     API-->Clientes;
     API-->Proveedores;
     API-->Productos;
+    API-->Usuarios;
+    end
+    subgraph Funcionalidad
+    API-->CorteDeCaja;
+    end
 ```
 Diagrama de Base de datos basado en diagrama entidad Relación original
 
 ```mermaid
 erDiagram
-    CUSTOMER ||--|{ ORDER : places
-    CUSTOMER {
-        string name
-        string custNumber
-        string sector
-    }
     proveedores ||--|{productos : provee
     productos {
         ObjectId id
@@ -48,15 +48,5 @@ erDiagram
     compras{
         ObjectId id
         Date fecha
-    }
-    ORDER ||--|{ LINE-ITEM : contains
-    ORDER {
-        int orderNumber
-        string deliveryAddress
-    }
-    LINE-ITEM {
-        string productCode
-        int quantity
-        float pricePerUnit
     }
 ```

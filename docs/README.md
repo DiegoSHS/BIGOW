@@ -27,3 +27,20 @@ cuando se ejecuta en modo producción no se pueden observar los cambios que se r
 
 Abre [http://localhost:3000](http://localhost:3000) para ver el resultado.
 
+## Base de datos
+
+la base de datos originalmente fue pensada para el paradigma relacional (SQL) pero actualmente funciona mediante MongoDb como base de datos basada en documentos (BSON).
+
+### Diagrama de simplificado de la Base de datos para MongoDb
+
+```mermaid
+erDiagram
+    proveedores ||--|{productos : provee
+    productos ||--|{cantidadCompras : posee
+    compras ||--|{cantidadCompras : posee
+    productos ||--|{ventas : produce
+    ventas ||--|{tickets : genera
+    clientes ||--|{tickets : genera
+    roles ||--|{users : tiene
+```
+más detalles sobre la base de datos ver [DATABASE.md](https://github.com/DiegoSHS/bicimotos-gonzales-web/blob/main/docs/BATABASE.md) 

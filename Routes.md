@@ -18,12 +18,12 @@ erDiagram
     proveedores ||--|{productos : provee
     productos ||--|{cantidadCompras : posee
     compras ||--|{cantidadCompras : posee
-    ventas ||--|{productos : produce
-    tickets ||--|{tickets : genera
+    productos ||--|{ventas : produce
+    ventas ||--|{tickets : genera
     clientes ||--|{tickets : genera
     roles ||--|{users : tiene
     productos {
-        ObjectId id
+        ObjectId id PK
         Boolean activo
         String clave
         String marca
@@ -34,10 +34,10 @@ erDiagram
         Number precioPublico
         Number precioTaller
         Number stock
-        ObjectId proveedorId
+        ObjectId proveedorId PK, FK
     }
     proveedores {
-        ObjectId id
+        ObjectId id PK
         String clave
         String direccion
         String email
@@ -45,33 +45,33 @@ erDiagram
         String telefono
     }
     cantidadCompras{
-        ObjectId id
+        ObjectId id PK
         Number cantidad
         Number costo
-        Number compraId
-        ObjectId productoId
+        ObjectId compraId PK, FK
+        ObjectId productoId PK, FK
     }
     compras{
-        ObjectId id
+        ObjectId id PK
         Date fecha
     }
     ventas{
-        ObjectId id
+        ObjectId id PK
         String ManodeObra
         Stiing servicio
         Number cantidad
         Number costo
         Number costoManodeObra
         Number productoId
-        ObjectId ticketId
+        ObjectId ticketId PK, FK
     }
     tickets{
-        ObjectId id
+        ObjectId id PK
         Date fecha
-        ObjectId clienteId
+        ObjectId clienteId PK, FK
     }
     clientes{
-        ObjectId id
+        ObjectId id PK
         String direccion
         String email
         String nombre
@@ -79,15 +79,14 @@ erDiagram
         String telefono
     }
     roles{
-        ObjectId id
+        ObjectId id PK
         String authority
-        ObjectId userId
+        ObjectId userId PK, FK
     }
     users{
-        ObjectId id
+        ObjectId id PK
         Boolean active
         String password
         String password
-
     }
 ```

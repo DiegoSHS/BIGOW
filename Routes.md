@@ -18,7 +18,10 @@ erDiagram
     proveedores ||--|{productos : provee
     productos ||--|{cantidadCompras : posee
     compras ||--|{cantidadCompras : posee
-    ventas ||--|{productos
+    ventas ||--|{productos : produce
+    tickets ||--|{tickets : genera
+    clientes ||--|{tickets : genera
+    roles ||--|{users : tiene
     productos {
         ObjectId id
         Boolean activo

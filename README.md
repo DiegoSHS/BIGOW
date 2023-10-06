@@ -23,4 +23,4 @@ npm run start
 
 Abre [http://localhost:3000](http://localhost:3000) para ver el resultado.
 
-Documentación extra en
+Para ver más información sobre el proyecto consulta la [Documentación](https://github.com/DiegoSHS/bicimotos-gonzales-web/tree/main/docs)

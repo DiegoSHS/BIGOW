@@ -2,7 +2,7 @@
 
 aquí se muestra la estructura y relaciones en la base de datos de [MongoDb](https://www.mongodb.com/) tomando como base la estructura relacional original.
 El diagrama original Para bases de datos relacionales se puede encontrar [aquí](https://github.com/DiegoSHS/bicimotos-gonzales-web/blob/main/bicisdbAgo05.pdf)
-## Diagrama de Base de datos para MongoDd
+## Diagrama de Base de datos para MongoDb
 
 ```mermaid
 erDiagram

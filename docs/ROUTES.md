@@ -5,14 +5,12 @@ cada ruta de la API tiene las funcionalidades:
 
 ```mermaid
 graph TD
-    Crear
+    Crear-->Uno
     Seleccionar-->Uno
     Seleccionar-->Muchos
     Editar-->Uno
     Eliminar-->Uno
     Eliminar-->Muchos
-
-    style Uno stroke:#333 
 ```
 
 los elementos de las colecciones a las que hacen referencia

@@ -1,5 +1,8 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import { connex } from "@/models/connector"
 
-export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' })
+export default async function handler(req, res) {
+  const collection = connex('bigo','products')
+  const result = await collection.find({}).toArray()
+  console.log(result)
+  res.status(200).json(result)
 }

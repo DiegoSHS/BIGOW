@@ -1,6 +1,7 @@
 # BMG (BICIMOTOS GONZÁLES WEB)
 
 Este es un proyecto de punto de venta en línea para el negocio "BICIMOTOS GONZÁLES"
+centrado en brindar una solución para mejorar procesos de negocios y mantener la Estética de la marca mediante software a la medida
 
 ## Comandos básicos
 

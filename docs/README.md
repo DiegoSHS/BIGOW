@@ -1,4 +1,4 @@
-# BMG (BICIMOTOS GONZÁLES WEB)
+# BIGOW (BICIMOTOS GONZÁLES WEB)
 
 Aqui se encuentra la documentación básica del proyecto
 

@@ -1,9 +1,13 @@
 import { connex } from "@/models/connector";
 
-// Function to validate a new productt
+/**
+ *  Validates a products object.
+ * 
+ * @param {Object} newProduct - The product object to validate.
+ * @returns {boolean} - Returns true if the product is valid otherwise false.
+ */
 const validateProduct = (newProduct) => {
     return (
-        // Verify that newProduct exists and that it meets the following conditions
         newProduct &&
         typeof newProduct.active === 'boolean' &&
         typeof newProduct.key === 'string' && newProduct.key.length >= 1 &&
@@ -18,7 +22,12 @@ const validateProduct = (newProduct) => {
     );
 }
 
-// Function to handle product registration
+/**
+ * Handles product registration.
+ * 
+ * @param {Object} newProduct - The product object to register.
+ * @returns {object} - Returns an object with status and message properties.
+ */
 const handleRegistration = async (newProduct) => {
     try {
         const collection = connex('bigo', 'products');
@@ -36,8 +45,13 @@ const handleRegistration = async (newProduct) => {
 }
 
 
-
-// POST request handler
+/**
+ *  Handles the HTTP POST request for product registration.
+ * 
+ * @param {Object} req - The request object. 
+ * @param {Object} res - The response obejct.
+ * @param {Promise<void>} - Sends an HTTP response with a message.
+ */
 export default async function handlerPost(req, res) {
     if (req.method === "POST") {
         try {

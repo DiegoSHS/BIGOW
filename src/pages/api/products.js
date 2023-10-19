@@ -1,6 +1,6 @@
 import { connex } from "@/models/connector";
 
-// Function to validate a new product
+// Function to validate a new productt
 const validateProduct = (newProduct) => {
     return (
         // Verify that newProduct exists and that it meets the following conditions
@@ -34,6 +34,7 @@ const handleRegistration = async (newProduct) => {
         return { status: 500, message: 'The product could not be registered' };
     }
 }
+
 
 
 // POST request handler

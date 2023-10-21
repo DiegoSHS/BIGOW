@@ -31,7 +31,7 @@ export default async function deleteProduct (req, res) {
         if (result.deletedCount === 1) {
             return res.status(200).json({ message: 'Successfully deleted product' });
         } else {
-            return res.status(404).json({ error: 'Producto no encontrado'})
+            return res.status(404).json({ error: 'Product not found'})
         }
     } catch (error) {
         console.error(error);

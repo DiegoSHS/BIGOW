@@ -8,9 +8,6 @@ import { ObjectId } from "mongodb"
  * @param {object} res - The response object.
  * @returns {Promise<void>} - A JSON response indicating succes or an error.
  * 
- * @param {string} req.method - The HTTP method of the request.
- * @param {string} req.query.id - The ID  of the product to be deleted.
- * 
  * @returns {JSON} - A JSON response indicating succes or an error.
  * @throws {Error} - Throws an error if there is an internal server error.
  */
@@ -20,12 +17,13 @@ export default async function deleteProduct (req, res) {
         return res.status(405).json({ error: 'Method not allowed'})
     }
 
+    /**
+     * The ID  of the product to be deleted.
+     * @type {string}
+     */
     const id = req.query.id;
 
     try {
-        /**
-         * @type {import('mongodb').DeleteWriteOpResultObject} result
-         */
         const result = await collectionProducts.deleteOne({ _id: new ObjectId(id) })
 
         if (result.deletedCount === 1) {

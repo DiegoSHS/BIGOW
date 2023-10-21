@@ -1,4 +1,4 @@
-import { connex } from "@/models/connector";
+import { collectionProducts } from "@/models/connector";
 
 /**
  *  Validates a products object.
@@ -30,10 +30,8 @@ const validateProduct = (newProduct) => {
  */
 const handleRegistration = async (newProduct) => {
     try {
-        const collection = connex('bigo', 'products');
-
         if (validateProduct(newProduct)) {
-            await collection.insertOne(newProduct);
+            await collectionProducts.insertOne(newProduct);
             return { status: 201, message: 'The product has been registered correctly' };
         }
         return { status: 400, message: 'Incomplete or incorrect data' };

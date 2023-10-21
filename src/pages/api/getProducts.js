@@ -1,4 +1,4 @@
-import { connex } from "@/models/connector";
+import { collectionProducts } from "@/models/connector";
 import { ObjectId } from "mongodb";
 
 /**
@@ -9,8 +9,7 @@ import { ObjectId } from "mongodb";
  * @returns {Promise<void>} - Return a JSON response with products API or error.
  */
 export default async function getProducts(req, res) {
-  const collection = connex("bigo", "products");
-  const data = await collection.find({}).toArray();
+  const data = await collectionProducts.find({}).toArray();
   const { query, method } = req;
 
   switch (method) {

@@ -1,4 +1,4 @@
-import { connex, collectionProducts } from "@/models/connector"
+import { collectionProducts } from "@/models/connector"
 import { ObjectId } from "mongodb"
 
 export default async function deleteProduct (req, res) {
@@ -9,7 +9,7 @@ export default async function deleteProduct (req, res) {
     const id = req.query.id;
 
     try {
-        const collection = connex ()
+        const result = await collectionProducts.deleteOne({ _id:ObjectId(id) })
     } catch (error) {
         
     }

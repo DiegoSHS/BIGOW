@@ -57,5 +57,3 @@ export const connex = (dbname = 'test', collec = 'tasks') => {
         return
     }
 }
-
-export const collectionProducts = connex('bigo', 'products');

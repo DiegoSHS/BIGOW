@@ -1,7 +1,6 @@
-import { Check, Delete, ExitToApp, FileCopyOutlined, FileCopySharp, InsertDriveFile, InsertDriveFileOutlined, Paid, PaidOutlined, Search, Send, ShoppingCartCheckout, Star, StarBorder, Sync } from "@mui/icons-material"
+import { Check, Delete, ExitToApp, FileCopyOutlined, InsertDriveFileOutlined, PaidOutlined, Search, ShoppingCartCheckout, StarBorder, Sync } from "@mui/icons-material"
 import { Box, Button, Fab, TextField, Typography } from "@mui/material"
 import Head from "next/head"
-import Link from "next/link"
 
 export default function Home() {
   return (
@@ -25,15 +24,13 @@ export default function Home() {
           <Button variant="contained" color="inherit" sx={{ mx: 1 }} startIcon={<StarBorder color="warning" />}>Mayoreo</Button>
           <Button variant="contained" color="inherit" sx={{ mx: 1 }} startIcon={<PaidOutlined color="warning" />}>Entradas</Button>
           <Button variant="contained" color="inherit" sx={{ mx: 1 }} startIcon={<ExitToApp color="primary" />}>Salidas</Button>
-          <Button variant="contained" color="inherit" sx={{ mx: 1 }} startIcon={<Delete color="error"/>}>Borrar</Button>
+          <Button variant="contained" color="inherit" sx={{ mx: 1 }} startIcon={<Delete color="error" />}>Borrar</Button>
         </Box>
         <Box sx={{ position: 'fixed', bottom: 100 }}>
-          <Link href={`/hash/`} passHref legacyBehavior>
-            <Fab variant="extended" size="medium" sx={{ m: 1 }}>
-              <Sync color="success" sx={{ mr: 1 }} />
-              cambiar
-            </Fab>
-          </Link>
+          <Fab variant="extended" size="medium" sx={{ m: 1 }}>
+            <Sync color="success" sx={{ mr: 1 }} />
+            cambiar
+          </Fab>
           <Fab variant="extended" size="medium" sx={{ m: 1 }}>
             <StarBorder color="warning" sx={{ mr: 1 }} />
             Pendiente

@@ -6,7 +6,6 @@ import { useEffect, useState } from "react"
 export const NavigationBar = () => {
     return (
         <AppBar color="default">
-
             <Toolbar>
                 <Link href={'/'} legacyBehavior passHref>
                     <IconButton color="inherit" disableRipple sx={{ mr: 2 }}>
@@ -15,32 +14,32 @@ export const NavigationBar = () => {
                     </IconButton>
                 </Link>
                 <Link href={'/sales'} legacyBehavior passHref>
-                    <Button sx={{mx:1}} startIcon={<PointOfSaleSharp />}>
+                    <Button sx={{ mx: 1 }} startIcon={<PointOfSaleSharp />}>
                         Ventas
                     </Button>
                 </Link>
                 <Link href={'/clients'} legacyBehavior passHref>
-                    <Button sx={{mx:1}} startIcon={<People></People>}>
+                    <Button sx={{ mx: 1 }} startIcon={<People></People>}>
                         Clientes
                     </Button>
                 </Link>
                 <Link href={'/products'} legacyBehavior passHref>
-                    <Button sx={{mx:1}} startIcon={<ListAlt />}>
+                    <Button sx={{ mx: 1 }} startIcon={<ListAlt />}>
                         Productos
                     </Button>
                 </Link>
                 <Link href={'/inventory'} legacyBehavior passHref>
-                    <Button sx={{mx:1}} startIcon={<Inventory />}>
+                    <Button sx={{ mx: 1 }} startIcon={<Inventory />}>
                         Inventario
                     </Button>
                 </Link>
                 <Link href={'/settings'} legacyBehavior passHref>
-                    <Button sx={{mx:1}} startIcon={<Settings></Settings>}>
+                    <Button sx={{ mx: 1 }} startIcon={<Settings />}>
                         Configuración
                     </Button>
                 </Link>
                 <Link href={'/count'} legacyBehavior passHref>
-                    <Button sx={{mx:1}} startIcon={<Storefront></Storefront>}>
+                    <Button sx={{ mx: 1 }} startIcon={<Storefront />}>
                         Corte
                     </Button>
                 </Link>

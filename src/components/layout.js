@@ -9,7 +9,7 @@ export const Layout = ({ children }) => {
     return (
         <ThemeProvider theme={defaultTheme}>
             <CssBaseline enableColorScheme />
-            <Container sx={{ my: 15, display: 'flex', flexDirection: 'center', alignItems: 'center' }} component={'main'} maxWidth='sm' fixed>
+            <Container sx={{ my: 10, display: 'flex', flexDirection: 'column', alignItems: 'center' }} component={'main'} maxWidth='xl' fixed>
                 <NavigationBar />
                 {children}
                 <BottomBar />

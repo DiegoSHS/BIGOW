@@ -1,3 +1,5 @@
+import { Check, Delete, ExitToApp, FileCopySharp, InsertDriveFile, Paid, Search, Star } from "@mui/icons-material"
+import { Box, Button, TextField, Typography } from "@mui/material"
 import Head from "next/head"
 
 export default function Home() {
@@ -9,9 +11,22 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        Inicio
-      </main>
+      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <Typography variant="h4" letterSpacing={4} textAlign={'center'}>Venta de productos</Typography>
+        <Box sx={{ display: 'flex',m:1 }} minWidth={'100%'}>
+          <TextField fullWidth sx={{ mx: 1 }} variant="outlined" label='Código del producto' size="small" type="search"></TextField>
+          <Button sx={{ mx: 1,px:2 }} startIcon={<Check />}>Agregar</Button>
+        </Box>
+        <Box>
+          <Button sx={{ mx: 1 }} startIcon={<FileCopySharp />}>Varios</Button>
+          <Button sx={{ mx: 1 }} startIcon={<InsertDriveFile />}>común</Button>
+          <Button sx={{ mx: 1 }} startIcon={<Search />}>Buscar</Button>
+          <Button sx={{ mx: 1 }} startIcon={<Star />}>Mayoreo</Button>
+          <Button sx={{ mx: 1 }} startIcon={<Paid></Paid>}>Entradas</Button>
+          <Button sx={{ mx: 1 }} startIcon={<ExitToApp></ExitToApp>}>Salidas</Button>
+          <Button sx={{ mx: 1 }} startIcon={<Delete></Delete>}>Borrar</Button>
+        </Box>
+      </Box>
     </>
   )
 }

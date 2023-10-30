@@ -18,7 +18,6 @@ const clientValidation = {
     }
 }
 
-
 export default async function handler(req, res) {
     const collection = connex({ collec: 'clients' })
     const validations = {

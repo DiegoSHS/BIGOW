@@ -1,6 +1,7 @@
-import { Check, Delete, ExitToApp, FileCopySharp, InsertDriveFile, Paid, Search, Star } from "@mui/icons-material"
-import { Box, Button, TextField, Typography } from "@mui/material"
+import { Check, Delete, ExitToApp, FileCopyOutlined, FileCopySharp, InsertDriveFile, InsertDriveFileOutlined, Paid, PaidOutlined, Search, Send, ShoppingCartCheckout, Star, StarBorder, Sync } from "@mui/icons-material"
+import { Box, Button, Fab, TextField, Typography } from "@mui/material"
 import Head from "next/head"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -13,18 +14,38 @@ export default function Home() {
       </Head>
       <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Typography variant="h4" letterSpacing={4} textAlign={'center'}>Venta de productos</Typography>
-        <Box sx={{ display: 'flex',m:1 }} minWidth={'100%'}>
+        <Box sx={{ display: 'flex', m: 1 }} minWidth={'100%'}>
           <TextField fullWidth sx={{ mx: 1 }} variant="outlined" label='Código del producto' size="small" type="search"></TextField>
-          <Button sx={{ mx: 1,px:2 }} startIcon={<Check />}>Agregar</Button>
+          <Button sx={{ mx: 1, px: 2 }} startIcon={<Check />}>Agregar</Button>
         </Box>
         <Box>
-          <Button sx={{ mx: 1 }} startIcon={<FileCopySharp />}>Varios</Button>
-          <Button sx={{ mx: 1 }} startIcon={<InsertDriveFile />}>común</Button>
-          <Button sx={{ mx: 1 }} startIcon={<Search />}>Buscar</Button>
-          <Button sx={{ mx: 1 }} startIcon={<Star />}>Mayoreo</Button>
-          <Button sx={{ mx: 1 }} startIcon={<Paid></Paid>}>Entradas</Button>
-          <Button sx={{ mx: 1 }} startIcon={<ExitToApp></ExitToApp>}>Salidas</Button>
-          <Button sx={{ mx: 1 }} startIcon={<Delete></Delete>}>Borrar</Button>
+          <Button variant="contained" color="inherit" sx={{ mx: 1 }} startIcon={<FileCopyOutlined color="primary" />}>Varios</Button>
+          <Button variant="contained" color="inherit" sx={{ mx: 1 }} startIcon={<InsertDriveFileOutlined color="primary" />}>común</Button>
+          <Button variant="contained" color="inherit" sx={{ mx: 1 }} startIcon={<Search color="primary" />}>Buscar</Button>
+          <Button variant="contained" color="inherit" sx={{ mx: 1 }} startIcon={<StarBorder color="warning" />}>Mayoreo</Button>
+          <Button variant="contained" color="inherit" sx={{ mx: 1 }} startIcon={<PaidOutlined color="warning" />}>Entradas</Button>
+          <Button variant="contained" color="inherit" sx={{ mx: 1 }} startIcon={<ExitToApp color="primary" />}>Salidas</Button>
+          <Button variant="contained" color="inherit" sx={{ mx: 1 }} startIcon={<Delete color="error"/>}>Borrar</Button>
+        </Box>
+        <Box sx={{ position: 'fixed', bottom: 100 }}>
+          <Link href={`/hash/`} passHref legacyBehavior>
+            <Fab variant="extended" size="medium" sx={{ m: 1 }}>
+              <Sync color="success" sx={{ mr: 1 }} />
+              cambiar
+            </Fab>
+          </Link>
+          <Fab variant="extended" size="medium" sx={{ m: 1 }}>
+            <StarBorder color="warning" sx={{ mr: 1 }} />
+            Pendiente
+          </Fab>
+          <Fab variant="extended" size="medium" sx={{ m: 1 }}>
+            <Delete color="error" sx={{ mr: 1 }} />
+            Eliminar
+          </Fab>
+          <Fab variant="extended" color="info" size="medium" sx={{ m: 1 }}>
+            <ShoppingCartCheckout sx={{ mr: 1 }} />
+            Cobrar
+          </Fab>
         </Box>
       </Box>
     </>

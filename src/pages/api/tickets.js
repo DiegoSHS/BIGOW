@@ -6,7 +6,6 @@ export default async function handler(req, res) {
     const validations = {
         'GET': [],
         'POST': [],
-        'PUT': [],
         'DELETE': []
     }
     return baseHandler(req, res, collection, validations)

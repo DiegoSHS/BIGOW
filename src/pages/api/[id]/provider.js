@@ -5,7 +5,6 @@ export default async function handler(req, res) {
     const collection = connex({ collec: 'providers' })
     const validations = {
         'GET': [],
-        'POST': [],
         'PUT': [],
         'DELETE': []
     }

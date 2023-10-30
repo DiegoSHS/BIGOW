@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 
 export const NavigationBar = () => {
     return (
-        <AppBar color="default">
+        <AppBar color="inherit" sx={{ boxShadow: 0 }}>
             <Toolbar>
                 <Link href={'/'} legacyBehavior passHref>
                     <IconButton color="inherit" disableRipple sx={{ mr: 2 }}>

@@ -46,7 +46,7 @@ export const validateClient = () => {
  * @param {String} collec The name of the collection
  * @returns {Collection} Returns an object with the collection
  */
-export const connex = (dbname = 'test', collec = 'tasks') => {
+export const connex = ({ dbname = 'bigo', collec = 'products' }) => {
     try {
         const client = validateClient()
         const datab = client.db(dbname)
@@ -57,5 +57,3 @@ export const connex = (dbname = 'test', collec = 'tasks') => {
         return
     }
 }
-
-export const collectionProducts = connex('bigo', 'products');

@@ -13,7 +13,7 @@ export const NavigationBar = () => {
                         BIGOW
                     </IconButton>
                 </Link>
-                <Link href={'/sales'} legacyBehavior passHref>
+                <Link href={'/'} legacyBehavior passHref>
                     <Button sx={{ mx: 1 }} startIcon={<PointOfSaleSharp />}>
                         Ventas
                     </Button>

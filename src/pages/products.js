@@ -1,5 +1,6 @@
+import { NewProduct } from '@/components/newproduct'
 import { CalendarMonth, Check, Clear, Delete, Edit, FileCopyOutlined, ImportExport, Star } from '@mui/icons-material'
-import { Box, Button, Fab, Typography } from '@mui/material'
+import { Box, Button, Fab, FormControlLabel, RadioGroup, TextField, Typography } from '@mui/material'
 
 export default function Products() {
     return (
@@ -13,6 +14,7 @@ export default function Products() {
                 <Button variant="contained" color="inherit" sx={{ mx: 1 }} startIcon={<Star color="warning" />}>Promociones</Button>
                 <Button variant="contained" color="inherit" sx={{ mx: 1 }} startIcon={<ImportExport color="warning" />}>Importar</Button>
             </Box>
+            <NewProduct></NewProduct>
             <Box sx={{ position: 'fixed', bottom: 100 }}>
                 <Fab variant="extended" size="medium" sx={{ m: 1 }}>
                     <Check color="success" sx={{ mr: 1 }} />

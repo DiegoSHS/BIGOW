@@ -12,7 +12,7 @@ export const singleton = (initState = null) => {
  * @param {String} uri Conection string to the database
  * @returns {MongoClient} Returns a MongoClient object
  */
-export const createClient = (uri = process.env.MONGO_URI) => {
+const createClient = (uri = process.env.MONGO_URI) => {
     try {
         return singleton(new MongoClient(uri))
     } catch (error) {
@@ -25,7 +25,7 @@ export const createClient = (uri = process.env.MONGO_URI) => {
  * Validates if the client exists, if not, creates a new one
  * @returns {MongoClient} Returns a MongoClient object
  */
-export const validateClient = () => {
+const validateClient = () => {
     try {
         const [client, update] = createClient()
         if (client() != null) {
@@ -46,7 +46,7 @@ export const validateClient = () => {
  * @param {String} collec The name of the collection
  * @returns {Collection} Returns an object with the collection
  */
-export const connex = (dbname = 'test', collec = 'tasks') => {
+export const connex = ({ dbname = 'bigo', collec = 'products' }) => {
     try {
         const client = validateClient()
         const datab = client.db(dbname)

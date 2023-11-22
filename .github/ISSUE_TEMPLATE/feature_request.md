@@ -7,14 +7,18 @@ assignees: ''
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+**Si la nueva característica está relacionada a un problema**
+Descripción detallada del problema
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+**Describe la solución**
+Una descripción clara de lo que se necesita
+Si se requiere añade un ejemplo
+```bash
+ code block = posibleFrature()
+```
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+**Describe alternativas a considerar**
+Una clara descripción / lista de opciones alternas a considerar para la solución
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+**Contexto adicional**
+Añade más contexto, imágenes, material de apoyo, documentación u otra información a considerar.
